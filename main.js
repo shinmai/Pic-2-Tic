@@ -140,6 +140,9 @@ function init() {
       paletteDiv.style.backgroundColor = colorPicker.value;
       paletteColors[i] = colorPicker.value;
       recolor_output_image();
+      let paletteStringTemp=""
+      colorPickers.forEach(picker => paletteStringTemp += picker.value.substr(1).toLowerCase())
+      textInput.value=paletteStringTemp
     });
     colorPickers[i] = colorPicker;
     paletteDiv.appendChild(colorPicker);
